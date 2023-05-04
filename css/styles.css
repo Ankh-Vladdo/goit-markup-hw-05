@@ -18,6 +18,8 @@
   --social-icon-hover-bg: #31d0aaff;
   --customers-logo: #8e8f99ff;
 
+  --header-line-active: #404bbf;
+
   --header-nav-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
   --hero-btn-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -126,22 +128,37 @@ section {
   color: var(--secondary-text);
 }
 /* ? HEADER NAV */
-.page-header {
-  border-bottom: 1px solid var(--border-portfolio);
-  box-shadow: var(--header-nav-box-shadow);
+.header-nav-link::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
 }
-.header-nav .link {
-  padding-top: 24px;
-  padding-bottom: 24px;
+
+.header-nav-link.active::after {
+  background-color: var(--header-line-active);
 }
-.header-nav {
+
+.header-nav-list {
   display: flex;
   align-items: center;
 }
-.nav-item:not(:last-child) {
+.header-nav{
+  display: flex;
+  align-items: center;
+}
+.header-nav-item:not(:last-child) {
   margin-right: 40px;
 }
-.header-nav {
+.header-nav-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -152,6 +169,12 @@ section {
 .link:hover,
 .link:focus {
   color: var(--secondary-accent);
+}
+.page-header {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid var(--border-portfolio);
+  box-shadow: var(--header-nav-box-shadow);
 }
 
 /* ? HEADER CONTACTS  */
@@ -344,8 +367,8 @@ section {
   margin-right: 0;
 }
 .card-content {
-padding-top: 32px;
-padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team {
@@ -403,7 +426,7 @@ padding-bottom: 32px;
 .customers-link:focus {
   fill: var(--secondary-accent);
   color: var(--secondary-accent);
-  border-color: var(--secondary-accent)
+  border-color: var(--secondary-accent);
 }
 
 .customers-list {
@@ -442,7 +465,7 @@ padding-bottom: 32px;
 }
 
 .footer-logo-container {
-margin-right: 120px;
+  margin-right: 120px;
 }
 
 .footer-socials-list {
@@ -522,7 +545,7 @@ margin-right: 120px;
 
 .project-link:hover,
 .project-link:focus {
-box-shadow: var(--project-hover-box-shadow);
+  box-shadow: var(--project-hover-box-shadow);
 }
 
 .filter-list {
