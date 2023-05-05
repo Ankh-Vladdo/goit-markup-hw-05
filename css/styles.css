@@ -33,6 +33,23 @@
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
   --bg-gradient: rgba(46, 47, 66, 0.7);
+
+  /* *Modal window */
+  --modal-backdrop-bg-color: rgba(46, 47, 66, 0.4);
+
+  --modal-bg-color: #fcfcfc;
+  --modal-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --modal-border-radius: 4px;
+
+  --modal-close-btn-bg-color: #e7e9fc;
+  --modal-close-btn-border: 1px solid rgba(0, 0, 0, 0.1);
+
+  --modal-close-icon-fill: #2e2f42;
+
+  /** Project-thumb-OVERLAY*/
+--project-overlay-bg-color: #4d5ae5;
+--project-overlay-text-color: #f4f4fd;
 }
 
 /* *Скидання стилів */
@@ -591,20 +608,20 @@ section {
 }
 /* *Overlay */
 .project-overlay {
-position: absolute;
-top: 0;
-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-padding-top: 40px;
-padding-left: 32px;
-padding-right: 32px;
-width: 100%;
-height: 100%;
-background-color: #4D5AE5;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--project-overlay-bg-color);
 }
 
 .project-overlay-text {
-  color: #F4F4FD;
+  color: var(--project-overlay-text-color);
 }
 
 .project-item:hover {
@@ -655,32 +672,32 @@ background-color: #4D5AE5;
 }
 
 /* *Modal window  */
-/* .backdrop {
+.backdrop {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(46, 47, 66, 0.4);
+  background: var(--modal-backdrop-bg-color);
 }
+
 .modal {
   position: absolute;
   top: calc(50% - 242px);
   left: calc(50% - 204px);
   width: 408px;
   height: 584px;
-  background: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  background: var(--modal-bg-color);
+  box-shadow: var(--modal-box-shadow);
+  border-radius: var(--modal-border-radius);
 }
 .modal-close-btn {
   position: absolute;
   top: -12px;
   right: -12px;
 
-  background: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--modal-close-btn-bg-color);
+  border: var(--modal-close-btn-border);
   border-radius: 50%;
 
   display: flex;
@@ -692,5 +709,5 @@ background-color: #4D5AE5;
   height: 24px;
 }
 .modal-close-icon {
-  fill: #2e2f42;
-} */
+  fill: var(--modal-close-icon-fill);
+}
