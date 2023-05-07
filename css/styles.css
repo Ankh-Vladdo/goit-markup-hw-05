@@ -688,7 +688,7 @@ section {
   transform: translateY(0);
 }
 
-.project-overlay {
+.project-overlay-text {
   transform: translateY(100%);
   transition: transform var(--animation-hover-focus-fast);
 
@@ -702,11 +702,9 @@ section {
   width: 100%;
   height: 100%;
   background-color: var(--project-overlay-bg-color);
-}
-
-.project-overlay-text {
   color: var(--project-overlay-text-color);
 }
+
 /* ? PROJECT CARDS */
 
 .project-item:hover {
