@@ -702,6 +702,14 @@ fill .filter-button {
 }
 
 /* ? PROJECT CARDS */
+
+.project-link{
+transition: color var(--animation-hover-focus-fast),
+background-color var(--animation-hover-focus-fast),
+border-color var(--animation-hover-focus-fast),
+box-shadow var(--animation-hover-focus-fast);
+}
+
 .project-link:hover .project-overlay-text,
 .project-link:focus .project-overlay-text {
   transform: translateY(0%);
@@ -732,11 +740,6 @@ fill .filter-button {
 }
 
 .project-item {
-  transition: color var(--animation-hover-focus-fast),
-    background-color var(--animation-hover-focus-fast),
-    border-color var(--animation-hover-focus-fast),
-    box-shadow var(--animation-hover-focus-fast);
-
   flex-basis: calc((100%-48) / 3);
   max-width: 360px;
   margin-right: 24px;
