@@ -169,6 +169,7 @@ section {
 
 .header-nav-link.active::after {
   background-color: var(--header-line-active);
+  bottom: -1px;
 }
 
 .header-nav-list {
@@ -284,8 +285,7 @@ section {
 
 .modal-open {
   transform: translate(-50%, -50%);
-  transition: color var(--animation-hover-focus-fast),
-    background-color var(--animation-hover-focus-fast);
+  transition: background-color var(--animation-hover-focus-fast);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -705,6 +705,10 @@ section {
 }
 
 /* ? PROJECT CARDS */
+.project-link:hover .project-overlay-text,
+.project-link:focus .project-overlay-text{
+  transform: translateY(0%);
+}
 
 .project-item:hover {
   box-shadow: var(--card-portfolio-hover-box-shadow);
