@@ -845,6 +845,6 @@ section {
 }
 
 .modal-close-icon:hover,
-.modal-open:focus {
+.modal-close-icon:focus {
   fill: white;
 }
