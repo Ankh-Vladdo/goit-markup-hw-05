@@ -852,11 +852,16 @@ box-shadow var(--animation-hover-focus-fast);
   fill: currentColor;
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+.modal-close-icon:hover{
   fill: white;
   color: white;
 }
+.modal-close-icon:focus{
+  fill: white;
+  color: white;
+}
+
+
 .customer-icon {
   fill: currentColor;
 }
