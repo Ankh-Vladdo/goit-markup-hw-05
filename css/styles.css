@@ -650,10 +650,14 @@ section {
   box-shadow: var(--filter-btn-hover-box-shadow);
 }
 
+.filter-item{
+transition: color var(--animation-hover-focus-fast),
+background-color var(--animation-hover-focus-fast),
+box-shadow var(--animation-hover-focus-fast),
+border-color var(--animation-hover-focus-fast);
+}
+
 .filter-button {
-  transition: color var(--animation-hover-focus-fast),
-    background-color var(--animation-hover-focus-fast),
-    box-shadow var(--animation-hover-focus-fast);
 
   padding-top: 12px;
   padding-bottom: 12px;
