@@ -156,7 +156,7 @@ section {
 }
 /* ? HEADER NAV */
 
-.header-nav-link::after {
+.header-nav-link.active::after{
   content: "";
   width: 100%;
   height: 4px;
@@ -648,7 +648,7 @@ section {
   border-radius: 4px;
   box-shadow: var(--filter-btn-hover-box-shadow);
 }
-fill .filter-button {
+.filter-button {
   transition: color var(--animation-hover-focus-fast),
     background-color var(--animation-hover-focus-fast),
     box-shadow var(--animation-hover-focus-fast),
