@@ -821,7 +821,7 @@ box-shadow var(--animation-hover-focus-fast);
 
 .modal-close-btn {
   transition: background-color var(--animation-hover-focus-fast),
-    border var(--animation-hover-focus-fast);
+  border var(--animation-hover-focus-fast);
 
   position: absolute;
   top: 24px;
