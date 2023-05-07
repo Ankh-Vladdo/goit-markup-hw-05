@@ -396,8 +396,7 @@ section {
 }
 
 .team-socials-link {
-  transition: color var(--animation-hover-focus-fast),
-    background-color var(--animation-hover-focus-fast);
+  transition: background-color var(--animation-hover-focus-fast);
 
   display: flex;
   align-items: center;
@@ -483,7 +482,6 @@ section {
 
 .customers-link {
   transition: color var(--animation-hover-focus-fast),
-    fill var(--animation-hover-focus-fast),
     border-color var(--animation-hover-focus-fast);
 
   display: flex;
@@ -556,8 +554,7 @@ section {
 }
 
 .footer-socials-link {
-  transition: color var(--animation-hover-focus-fast),
-    background-color var(--animation-hover-focus-fast);
+  transition: background-color var(--animation-hover-focus-fast);
 
   display: flex;
   align-items: center;
@@ -706,7 +703,7 @@ section {
 
 /* ? PROJECT CARDS */
 .project-link:hover .project-overlay-text,
-.project-link:focus .project-overlay-text{
+.project-link:focus .project-overlay-text {
   transform: translateY(0%);
 }
 
@@ -803,20 +800,22 @@ section {
   position: absolute;
   top: calc(50%);
   left: calc(50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
-  transition: opacity var(--animation-hover-focus-fast),
-    transform var(--animation-hover-focus-fast);
+  transition: transform var(--animation-hover-focus-fast);
   transition-delay: 250ms;
 
   width: 408px;
-  height: 584px;
+  min-height: 576px;
   background: var(--modal-bg-color);
   box-shadow: var(--modal-box-shadow);
   border-radius: var(--modal-border-radius);
 }
 
 .modal-close-btn {
+  transition: background-color var(--animation-hover-focus-fast),
+    border var(--animation-hover-focus-fast);
+
   position: absolute;
   top: 24px;
   right: 24px;
@@ -828,20 +827,24 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
 
-.modal-close-btn:hover {
-  background-color: var(--modal-close-btn-hover-bg-color);
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-icon {
-  fill: var(--modal-close-icon-fill);
+  transition: fill var(--modal-close-icon-fill);
 }
 
-.modal-close-icon:hover {
+.modal-close-icon:hover,
+.modal-open:focus {
   fill: white;
 }
