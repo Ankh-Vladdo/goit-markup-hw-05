@@ -171,7 +171,6 @@ section {
 
 .header-nav-link.active::after {
   background-color: var(--header-line-active);
-
 }
 
 .header-nav-list {
@@ -484,7 +483,7 @@ section {
 
 .customers-link {
   transition: color var(--animation-hover-focus-fast),
-  border-color var(--animation-hover-focus-fast);
+    border-color var(--animation-hover-focus-fast);
 
   display: flex;
   align-items: center;
@@ -648,17 +647,15 @@ section {
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: var(--filter-btn-hover-box-shadow);
-}fill
-
-.filter-button{
-transition: color var(--animation-hover-focus-fast),
-background-color var(--animation-hover-focus-fast),
-box-shadow var(--animation-hover-focus-fast),
-border-color var(--animation-hover-focus-fast);
+}
+fill .filter-button {
+  transition: color var(--animation-hover-focus-fast),
+    background-color var(--animation-hover-focus-fast),
+    box-shadow var(--animation-hover-focus-fast),
+    border-color var(--animation-hover-focus-fast);
 }
 
 .filter-button {
-
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 24px;
@@ -798,6 +795,7 @@ border-color var(--animation-hover-focus-fast);
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition-delay: 0ms;
+  transition: transform var(--animation-hover-focus-fast);
 }
 .modal {
   position: absolute;
@@ -806,6 +804,7 @@ border-color var(--animation-hover-focus-fast);
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform var(--animation-hover-focus-fast);
+  transition-delay: 250ms;
 
   width: 408px;
   min-height: 576px;
@@ -855,5 +854,3 @@ border-color var(--animation-hover-focus-fast);
 .customer-icon {
   fill: currentColor;
 }
-
-
