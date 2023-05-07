@@ -677,14 +677,13 @@ section {
   margin-right: 24px;
 }
 
-
 /* *OVERLAY */
 .project-thumb {
   position: relative;
   overflow: hidden;
 }
 
-.project-item:hover .project-overlay {
+.project-item:hover .project-overlay-text {
   transform: translateY(0);
 }
 
@@ -732,7 +731,10 @@ section {
 }
 
 .project-item {
-  transition: box-shadow var(--animation-hover-focus-fast);
+  transition: color var(--animation-hover-focus-fast),
+    background-color var(--animation-hover-focus-fast),
+    border-color var(--animation-hover-focus-fast),
+    box-shadow var(--animation-hover-focus-fast);
 
   flex-basis: calc((100%-48) / 3);
   max-width: 360px;
