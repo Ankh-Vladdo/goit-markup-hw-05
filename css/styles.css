@@ -483,6 +483,9 @@ section {
 /* ? CUSTOMERS SECTION */
 
 .customers-link {
+  transition: color var(--animation-hover-focus-fast),
+  border-color var(--animation-hover-focus-fast);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -507,10 +510,6 @@ section {
 .customers-list {
   display: flex;
   gap: 24px;
-}
-.customers-item .link{
-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item {
@@ -649,7 +648,7 @@ border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: var(--filter-btn-hover-box-shadow);
-}
+}fill
 
 .filter-button{
 transition: color var(--animation-hover-focus-fast),
@@ -806,8 +805,7 @@ border-color var(--animation-hover-focus-fast);
   left: calc(50%);
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 250ms;
+  transition: transform var(--animation-hover-focus-fast);
 
   width: 408px;
   min-height: 576px;
@@ -845,10 +843,17 @@ border-color var(--animation-hover-focus-fast);
 }
 
 .modal-close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animation-hover-focus-fast);
+  fill: currentColor;
 }
 
 .modal-close-icon:hover,
 .modal-close-icon:focus {
   fill: white;
+  color: white;
 }
+.customer-icon {
+  fill: currentColor;
+}
+
+
