@@ -169,7 +169,7 @@ section {
 }
 
 .header-nav-link.active::after {
-  background-color: var(--header-line-active);
+  background-color: #404bbf;
 }
 
 .header-nav-list {
