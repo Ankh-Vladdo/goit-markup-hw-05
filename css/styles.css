@@ -798,6 +798,9 @@ box-shadow var(--animation-hover-focus-fast);
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition-delay: 0ms;
+}
+
+.backdrop.is-hidden{
   transition: transform var(--animation-hover-focus-fast);
 }
 .modal {
