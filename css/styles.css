@@ -677,15 +677,21 @@ section {
   margin-right: 24px;
 }
 
-/* ? PROJECT CARDS */
-
-.project-thumb {
-  position: relative;
-}
 
 /* *OVERLAY */
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-item:hover .project-overlay {
+  transform: translateY(0);
+}
 
 .project-overlay {
+  transform: translateY(100%);
+  transition: transform var(--animation-hover-focus-fast);
+
   position: absolute;
   top: 0;
   left: 0;
@@ -701,6 +707,7 @@ section {
 .project-overlay-text {
   color: var(--project-overlay-text-color);
 }
+/* ? PROJECT CARDS */
 
 .project-item:hover {
   box-shadow: var(--card-portfolio-hover-box-shadow);
@@ -765,7 +772,7 @@ section {
 .backdrop {
   opacity: 1;
   visibility: visible;
-  pointer-events:initial;
+  pointer-events: initial;
   transition: opacity var(--animation-hover-focus-fast),
     visibility var(--animation-hover-focus-fast);
 
@@ -783,15 +790,20 @@ section {
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal{
+.backdrop.is-hidden .modal {
   opacity: 0;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
+  transition-delay: 0ms;
 }
 .modal {
   position: absolute;
   top: calc(50%);
   left: calc(50%);
   transform: translate(-50%, -50%);
+
+  transition: opacity var(--animation-hover-focus-fast),
+    transform var(--animation-hover-focus-fast);
+  transition-delay: 250ms;
 
   width: 408px;
   height: 584px;
@@ -828,8 +840,4 @@ section {
 
 .modal-close-icon:hover {
   fill: white;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
