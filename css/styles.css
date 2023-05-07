@@ -702,14 +702,6 @@ fill .filter-button {
 }
 
 /* ? PROJECT CARDS */
-
-.project-link{
-transition: color var(--animation-hover-focus-fast),
-background-color var(--animation-hover-focus-fast),
-border-color var(--animation-hover-focus-fast),
-box-shadow var(--animation-hover-focus-fast);
-}
-
 .project-link:hover .project-overlay-text,
 .project-link:focus .project-overlay-text {
   transform: translateY(0%);
@@ -798,9 +790,6 @@ box-shadow var(--animation-hover-focus-fast);
   opacity: 0;
   transform: translate(-50%, -50%) scale(1);
   transition-delay: 0ms;
-}
-
-.backdrop.is-hidden{
   transition: transform var(--animation-hover-focus-fast);
 }
 .modal {
@@ -821,7 +810,7 @@ box-shadow var(--animation-hover-focus-fast);
 
 .modal-close-btn {
   transition: background-color var(--animation-hover-focus-fast),
-  border var(--animation-hover-focus-fast);
+    border var(--animation-hover-focus-fast);
 
   position: absolute;
   top: 24px;
@@ -852,16 +841,11 @@ box-shadow var(--animation-hover-focus-fast);
   fill: currentColor;
 }
 
-.modal-close-icon:hover{
+.modal-close-icon:hover,
+.modal-close-icon:focus {
   fill: white;
   color: white;
 }
-.modal-close-icon:focus{
-  fill: white;
-  color: white;
-}
-
-
 .customer-icon {
   fill: currentColor;
 }
