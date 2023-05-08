@@ -807,13 +807,13 @@ section {
 }
 
 .modal-close-btn {
-  transition: background-color var(--animation-hover-focus-fast),
-    border var(--animation-hover-focus-fast);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   position: absolute;
   top: 24px;
   right: 24px;
 
+  color:var(--modal-close-icon-fill) ;
   background: var(--modal-close-btn-bg-color);
   border: var(--modal-close-btn-border);
   border-radius: 50%;
@@ -831,6 +831,7 @@ section {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
+  color: white;
   border: none;
 }
 
@@ -839,9 +840,5 @@ section {
   fill: currentColor;
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-  fill: white;
-  color: white;
-}
+
 
