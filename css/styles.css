@@ -207,7 +207,6 @@ section {
 }
 
 .page-header {
-  position: fixed;
   width: 100%;
   border-bottom: 1px solid var(--border-portfolio);
   box-shadow: var(--header-nav-box-shadow);
@@ -481,8 +480,8 @@ section {
 /* ? CUSTOMERS SECTION */
 
 .customers-link {
-  transition: color var(--animation-hover-focus-fast),
-    border-color var(--animation-hover-focus-fast);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   display: flex;
   align-items: center;
@@ -517,7 +516,7 @@ section {
   width: calc((100% - 120px) / 6);
   height: 88px;
   background-color: var(--primary-bg);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 .customers-subtitle {
