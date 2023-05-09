@@ -170,6 +170,10 @@ section {
 
 .header-nav-link.active::after {
   background-color: #404bbf;
+  
+}
+.header-nav-link.active {
+  color: #404bbf;
 }
 
 .header-nav-list {
@@ -197,6 +201,7 @@ section {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+  color: var(--primary-text);
   transition: color var(--animation-hover-focus-fast);
 }
 
