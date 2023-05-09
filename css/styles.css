@@ -166,12 +166,10 @@ section {
   bottom: 0;
   left: 0;
   bottom: -1px;
-  
 }
 
 .header-nav-link.active::after {
   background-color: #404bbf;
-  
 }
 .header-nav-link.active {
   color: #404bbf;
